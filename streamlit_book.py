@@ -64,8 +64,7 @@ if cols_2[0].button("Submit",key="2"):
         
     
     
-item1
-item2    
+print(item1 + item2)    
 
  
 
