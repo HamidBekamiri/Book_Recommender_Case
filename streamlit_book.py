@@ -41,7 +41,7 @@ book1 = list(dfdict[(dfdict["Book-Author"]==selectbox_author)&(dfdict["Book-Titl
 
 if cols_1[0].button("Submit",key="1"):
     if len(book1) != 0:
-        book1 = list(dfdict[(dfdict["Book-Author"]==selectbox_author)&(dfdict["Book-Title"] ==selectbox_title)].iloc[:,2])[0]
+        item1 = list(dfdict[(dfdict["Book-Author"]==selectbox_author)&(dfdict["Book-Title"] ==selectbox_title)].iloc[:,2])[0]
     else:
         st.write("There are no books satisfying your search!")
 
@@ -58,14 +58,14 @@ book2 = list(dfdict[(dfdict["Book-Author"]==selectbox_author2)&(dfdict["Book-Tit
         
 if cols_2[0].button("Submit",key="2"):
     if len(book2) != 0:
-        book2 = list(dfdict[(dfdict["Book-Author"]==selectbox_author2)&(dfdict["Book-Title"] ==selectbox_title2)].iloc[:,2])[0]
+        item2 = list(dfdict[(dfdict["Book-Author"]==selectbox_author2)&(dfdict["Book-Title"] ==selectbox_title2)].iloc[:,2])[0]
     else:
         st.write("There are no books satisfying your search!")    
     
     
     
 #passing the book IDs to one list 
-listofproducts = [book1, book2]
+listofproducts = [item1, item2]
 
 print(listofproducts)
 
