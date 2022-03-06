@@ -50,8 +50,8 @@ if cols_1[0].button("Submit"):
 col_two_list_tit = listofbooks
 col_two_list_auth = listofauthors
 #cols2 = st.columns((2))
-selectbox_title2 = cols[0].selectbox('Please choose the book title', col_two_list_tit)
-selectbox_author2 = cols[1].selectbox('Please choose the author', col_two_list_auth, index=0)
+selectbox_title2 = st.selectbox('Please choose the book title', col_two_list_tit)
+selectbox_author2 = st.selectbox('Please choose the author', col_two_list_auth, index=0)
 
 cols_2 = st.columns((1, 1))
 
