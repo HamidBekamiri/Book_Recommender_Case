@@ -30,10 +30,10 @@ df, dfdict, listofbooks, listofauthors = loaddata()
 IDtoNameDict = dict(zip(list(dfdict.ProductId),list(dfdict["Book-Title"])))
 
 #first book choosing
-col_one_list_tit = listofbooks
-col_one_list_auth = listofauthors
-selectbox_title = st.selectbox('Please choose the book title', col_one_list_tit, index=0,key="1")
-selectbox_author = st.selectbox('Please choose the author', col_one_list_auth, index=0,key="1")
+#col_one_list_tit = listofbooks
+#col_one_list_auth = listofauthors
+selectbox_title = st.selectbox('Please choose the book title', listofbooks, index=0,key="1")
+selectbox_author = st.selectbox('Please choose the author', listofauthors, index=0,key="1")
 
 cols_1 = st.columns((1, 1))
 
@@ -47,10 +47,10 @@ if cols_1[0].button("Submit",key="1"):
         st.write("There are no books satisfying your search!")
 
  #second book choosing       
-col_two_list_tit = listofbooks
-col_two_list_auth = listofauthors
-selectbox_title2 = st.selectbox('Please choose the book title', col_two_list_tit, key="2")
-selectbox_author2 = st.selectbox('Please choose the author', col_two_list_auth, index=0, key="2")
+#col_two_list_tit = listofbooks
+#col_two_list_auth = listofauthors
+selectbox_title2 = st.selectbox('Please choose the book title', listofbooks, key="2")
+selectbox_author2 = st.selectbox('Please choose the author', listofauthors, index=0, key="2")
 
 cols_2 = st.columns((1, 1))
 
@@ -64,10 +64,10 @@ if cols_2[0].button("Submit",key="2"):
         st.write("There are no books satisfying your search!")  
   
 #third book choosing       
-col_three_list_tit = listofbooks
-col_three_list_auth = listofauthors
-selectbox_title3 = st.selectbox('Please choose the book title', col_three_list_tit, key="3")
-selectbox_author3 = st.selectbox('Please choose the author', col_three_list_auth, index=0, key="3")
+#col_three_list_tit = listofbooks
+#col_three_list_auth = listofauthors
+selectbox_title3 = st.selectbox('Please choose the book title', listofbooks, key="3")
+selectbox_author3 = st.selectbox('Please choose the author', listofauthors, index=0, key="3")
 
 cols_3 = st.columns((1, 1))
 
