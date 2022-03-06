@@ -40,7 +40,7 @@ cols_1 = st.columns((1, 1))
 book1 = list(dfdict[(dfdict["Book-Author"]==selectbox_author)&(dfdict["Book-Title"] ==selectbox_title)].iloc[:,2])
 
 
-if cols_1[0].button("Submit"):
+if cols_1[0].button("Submit",key="1"):
     if len(book1) != 0:
         book1 = list(dfdict[(dfdict["Book-Author"]==selectbox_author)&(dfdict["Book-Title"] ==selectbox_title)].iloc[:,2])[0]
     else:
@@ -58,7 +58,7 @@ cols_2 = st.columns((1, 1))
 book2 = list(dfdict[(dfdict["Book-Author"]==selectbox_author2)&(dfdict["Book-Title"] ==selectbox_title2)].iloc[:,2])        
         
         
-if cols_2[0].button("Submit"):
+if cols_2[0].button("Submit",key="2"):
     if len(book2) != 0:
         book2 = list(dfdict[(dfdict["Book-Author"]==selectbox_author2)&(dfdict["Book-Title"] ==selectbox_title2)].iloc[:,2])[0]
     else:
