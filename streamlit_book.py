@@ -44,27 +44,23 @@ if cols_2[0].button("Submit"):
         book1 = list(dfdict[(dfdict["Book-Author"]==selectbox_author)&(dfdict["Book-Title"] ==selectbox_title)].iloc[:,2])[0]
     else:
         st.write("There are no books satisfying your search!")
-        
-        
-        
-        
-#passing the book IDs to one list 
-listofproducts = [book1]
-#Making recommendation for books according to cosine similarity, passing the listofproducts to reommend
-recommendation_item = model.get_similar_items(items=listofproducts, k=10)
-#Creating dataframe
-dfitem = pd.DataFrame(recommendation_item)
-#Data manipulation and transformation to show the top 10 books to recommend
-dfitem['item_occ'] = dfitem.groupby('similar').similar.transform('count')
-dfitem = dfitem.sort_values(["item_occ", "score"],ascending=(False,False))
-dfitem = dfitem[~dfitem["similar"].isin(listofproducts)]
-dfitem = dfitem.drop_duplicates(subset=['similar', "item_occ"])
-dfitem.index = range(len(dfitem))
-dfitem = dfitem.drop(columns=["ProductId", "score", "rank", "item_occ"])
-dfitem = dfitem.replace({"similar":IDtoNameDict})
-dfitem = dfitem.rename(columns={"similar":"recommended books"})
-st.write("These are the books you might be interested in, based on your previously liked books:")
-st.table(dfitem.head())
+    #passing the book IDs to one list 
+    listofproducts = [book1]
+    #Making recommendation for books according to cosine similarity, passing the listofproducts to reommend
+    recommendation_item = model.get_similar_items(items=listofproducts, k=10)
+    #Creating dataframe
+    dfitem = pd.DataFrame(recommendation_item)
+    #Data manipulation and transformation to show the top 10 books to recommend
+    dfitem['item_occ'] = dfitem.groupby('similar').similar.transform('count')
+    dfitem = dfitem.sort_values(["item_occ", "score"],ascending=(False,False))
+    dfitem = dfitem[~dfitem["similar"].isin(listofproducts)]
+    dfitem = dfitem.drop_duplicates(subset=['similar', "item_occ"])
+    dfitem.index = range(len(dfitem))
+    dfitem = dfitem.drop(columns=["ProductId", "score", "rank", "item_occ"])
+    dfitem = dfitem.replace({"similar":IDtoNameDict})
+    dfitem = dfitem.rename(columns={"similar":"recommended books"})
+    st.write("These are the books you might be interested in, based on your previously liked books:")
+    st.table(dfitem.head(10))
 
 
  
