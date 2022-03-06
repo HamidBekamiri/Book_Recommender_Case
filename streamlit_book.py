@@ -63,11 +63,12 @@ if cols_2[0].button("Submit",key="2"):
         st.write("There are no books satisfying your search!")    
     
     
+print(item1)
     
 #passing the book IDs to one list 
-listofproducts = [item1, item2]
+#listofproducts = [item1, item2]
 
-print(listofproducts)
+#print(listofproducts)
 
 '''#Making recommendation for books according to cosine similarity, passing the listofproducts to reommend
 recommendation_item = model.get_similar_items(items=listofproducts, k=10)
