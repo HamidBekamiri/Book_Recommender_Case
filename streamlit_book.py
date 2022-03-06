@@ -44,7 +44,6 @@ if cols_1[0].button("Submit",key="1"):
         item1 = list(dfdict[(dfdict["Book-Author"]==selectbox_author)&(dfdict["Book-Title"] ==selectbox_title)].iloc[:,2])[0]
     else:
         st.write("There are no books satisfying your search!")
-    return item1
 
         
 col_two_list_tit = listofbooks
@@ -62,7 +61,6 @@ if cols_2[0].button("Submit",key="2"):
         item2 = list(dfdict[(dfdict["Book-Author"]==selectbox_author2)&(dfdict["Book-Title"] ==selectbox_title2)].iloc[:,2])[0]
     else:
         st.write("There are no books satisfying your search!")  
-    return item2
         
     
     
