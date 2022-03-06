@@ -9,7 +9,7 @@ from streamlit import caching
 
 st.set_page_config(page_title="Book Recommender System", page_icon="🐞", layout="centered")
 st.header("🐞 Book Recommender System!")
-st.subheader('David Project')
+st.subheader('Project for DataScentics entry case')
 
 @st.cache 
 def loaddata():
