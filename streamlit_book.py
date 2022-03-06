@@ -37,9 +37,6 @@ selectbox_author = cols[1].selectbox('Please choose the author', col_one_list_au
 
 cols_2 = st.columns((1, 1))
 
-cols3 = st.columns((2))
-
-
 book1 = list(dfdict[(dfdict["Book-Author"]==selectbox_author)&(dfdict["Book-Title"] ==selectbox_title)].iloc[:,2])
 
 if cols_2[0].button("Submit"):
