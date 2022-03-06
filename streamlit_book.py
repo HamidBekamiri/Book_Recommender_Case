@@ -32,8 +32,8 @@ IDtoNameDict = dict(zip(list(dfdict.ProductId),list(dfdict["Book-Title"])))
 col_one_list_tit = listofbooks
 col_one_list_auth = listofauthors
 #cols = st.columns((2))
-selectbox_title = st.selectbox('Please choose the book title', col_one_list_tit, index=0)
-selectbox_author = st.selectbox('Please choose the author', col_one_list_auth, index=0)
+selectbox_title = st.selectbox('Please choose the book title', col_one_list_tit, index=0,key="1")
+selectbox_author = st.selectbox('Please choose the author', col_one_list_auth, index=0,key="1")
 
 cols_1 = st.columns((1, 1))
 
@@ -50,8 +50,8 @@ if cols_1[0].button("Submit"):
 col_two_list_tit = listofbooks
 col_two_list_auth = listofauthors
 #cols2 = st.columns((2))
-selectbox_title2 = st.selectbox('Please choose the book title', col_two_list_tit)
-selectbox_author2 = st.selectbox('Please choose the author', col_two_list_auth, index=0)
+selectbox_title2 = st.selectbox('Please choose the book title', col_two_list_tit, key="2")
+selectbox_author2 = st.selectbox('Please choose the author', col_two_list_auth, index=0, key="2")
 
 cols_2 = st.columns((1, 1))
 
