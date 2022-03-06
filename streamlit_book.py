@@ -36,14 +36,6 @@ selectbox_title = cols[0].selectbox('Please choose the book title', col_one_list
 selectbox_author = cols[1].selectbox('Please choose the author', col_one_list_auth)
 book1 = list(dfdict[(dfdict["Book-Author"]==selectbox_auther)&(dfdict["Book-Title"] ==selectbox_title)].iloc[:,2])[0]
 
-col_two_list_tit = listofbooks
-col_two_list_auth = listofauthors
-cols2 = st.columns((2))
-selectbox_title2 = cols2[0].selectbox('Please choose the book title', col_two_list_tit, index=0)
-selectbox_author2 = cols2[1].selectbox('Please choose the author', col_two_list_auth)
-book2 = list(dfdict[(dfdict["Book-Author"]==selectbox_auther2)&(dfdict["Book-Title"] ==selectbox_title2)].iloc[:,2])[0]
-    
-    
     
 #passing the book IDs to one list 
 listofproducts = [book1, book2]
