@@ -44,7 +44,7 @@ selectbox_author2 = cols2[1].selectbox('Please choose the author', col_two_list_
 book2 = list(dfdict[(dfdict["Book-Author"]==selectbox_author2)&(dfdict["Book-Title"] ==selectbox_title2)].iloc[:,2])[0]
     
 #passing the book IDs to one list 
-listofproducts = [book1]
+listofproducts = [book1, book2]
 #Making recommendation for books according to cosine similarity, passing the listofproducts to reommend
 recommendation_item = model.get_similar_items(items=listofproducts, k=10)
 #Creating dataframe
