@@ -34,8 +34,10 @@ col_one_list_auth = listofauthors
 cols = st.columns((2))
 selectbox_title_1 = cols[0].selectbox('Please choose the book title', col_one_list_tit, index=0)
 selectbox_auther_1 = cols[1].selectbox('Please choose the author', col_one_list_auth)
-selectbox_title_2 = cols[0].selectbox('Please choose the book title', col_one_list_tit, index=0)
-selectbox_auther_2 = cols[1].selectbox('Please choose the author', col_one_list_auth)
+
+cols_1 = st.columns((2))
+selectbox_title_2 = cols_1[0].selectbox('Please choose the book title', col_one_list_tit, index=0)
+selectbox_auther_2 = cols_1[1].selectbox('Please choose the author', col_one_list_auth)
 
 cols_2 = st.columns((1, 1))
 
